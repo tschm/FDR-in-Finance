@@ -8,12 +8,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
-def run_script(script_name: str) -> subprocess.CompletedProcess:
+def run_script(script_name: str, timeout: int = 600) -> subprocess.CompletedProcess:
     return subprocess.run(
         ["uv", "run", script_name],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
+        check=False,
+        timeout=timeout,
     )
 
 
