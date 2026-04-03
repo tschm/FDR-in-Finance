@@ -47,7 +47,7 @@ Outputs:
 
 Loads the predictor dataset, estimates Sharpe ratios and AR(1) autocorrelations,
 then fits a maximum-of-mixtures model for each value of *K* (1–10, 25, 50, 75, 100).
-Parallelised across *K* values via `ProcessPoolExecutor`.
+Parallelized across *K* values via `ProcessPoolExecutor`.
 
 ```bash
 python code_table_2-robust-parallel.py
