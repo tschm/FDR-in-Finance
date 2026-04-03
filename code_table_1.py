@@ -1,9 +1,9 @@
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
-#   "numpy",
-#   "pandas",
-#   "scipy",
+#   "numpy==2.2.6",
+#   "pandas==2.2.3",
+#   "scipy==1.15.3",
 # ]
 # ///
 
