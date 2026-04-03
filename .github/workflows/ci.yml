@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Run code_table_1.py
+        run: uv run code_table_1.py
+
+      - name: Run code_table_2-robust-parallel.py
+        run: uv run code_table_2-robust-parallel.py
